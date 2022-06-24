@@ -50,6 +50,7 @@ class Kernel extends ConsoleKernel
 
         $schedule->job(new QueueSize)->everyFiveMinutes()->withoutOverlapping();
 
+
         $schedule->job(new CompanySizeCheck)->daily()->withoutOverlapping();
 
         $schedule->job(new UpdateExchangeRates)->daily()->withoutOverlapping();
